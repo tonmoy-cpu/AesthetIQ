@@ -5,7 +5,7 @@ export default function Leaderboard() {
   const [scores, setScores] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5001/api/leaderboard").then((res) => {
+    axios.get("https://aesthetiq-zb4o.onrender.com/api/leaderboard").then((res) => {
       setScores(res.data);
     });
   }, []);

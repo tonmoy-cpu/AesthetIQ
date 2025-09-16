@@ -47,7 +47,7 @@ export default function UploadBox({ setScore, isLoading, setIsLoading }) {
       formData.append("image", file);
       formData.append("username", username.trim());
 
-      const res = await axios.post("http://localhost:5001/api/predict", formData, {
+      const res = await axios.post("https://aesthetiq-zb4o.onrender.com/api/predict", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
@@ -84,7 +84,7 @@ export default function UploadBox({ setScore, isLoading, setIsLoading }) {
             📸 Upload your photo
           </label>
           <div
-            className={`relative border-2 border-dashed rounded-xl p-6 text-center transition-all cursor-pointer ${
+            className={`relative border-2 border-dashed rounded-1xl p-6 text-center transition-all cursor-pointer ${
               dragActive
                 ? "border-yellow-300 bg-yellow-300/10"
                 : "border-white/40 hover:border-white/60 hover:bg-white/5"
@@ -105,11 +105,11 @@ export default function UploadBox({ setScore, isLoading, setIsLoading }) {
             />
             
             {preview ? (
-              <div className="space-y-3">
+              <div className="space-y-10">
                 <img
                   src={preview}
                   alt="Preview"
-                  className="w-24 h-24 object-cover rounded-full mx-auto border-4 border-white/50"
+                  className="upload-preview object-cover rounded-2xl mx-auto border-4 border-white/50"
                 />
                 <p className="text-white/80">Looking great! Ready to predict? 🌟</p>
               </div>

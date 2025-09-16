@@ -17,7 +17,7 @@ export default function AdminDashboard() {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:5001/api/leaderboard");
+      const res = await axios.get("https://aesthetiq-zb4o.onrender.com/api/leaderboard");
       const allScores = res.data;
       setScores(allScores);
 
