@@ -43,7 +43,7 @@ router.post("/", upload.single("image"), async (req, res) => {
     console.log("🔄 Sending image to ML API...");
     
     // Send to ML API
-    const response = await fetch("https://beauty-rate.onrender.com/predict", {
+    const response = await fetch("https://heisnberg-1234-facial-beauty-predictor.hf.space/predict", {
       method: "POST",
       body: formData,
       headers: formData.getHeaders(),
